@@ -43,4 +43,4 @@ __Change Log__
 3. move main page logo down 5% in custom.css
 4. changes initial error message to "Stock not found", fo
 5. added vm.error = ''; clears error from page, find-controller.js:13 - jf
-6. 
+6. dashboard now displays stocks and amounts, vm.stocks = response.data.stocks, dashboard-controller.js:14 - jf
