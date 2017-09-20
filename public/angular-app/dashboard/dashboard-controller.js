@@ -8,7 +8,10 @@ function DashboardController( $http, $window, AuthFactory, jwtHelper, $location)
     var username = decodedToken.username;
     
     $http.get('/api/users/'+ username +"/stocks").then(function(response) {
-      vm.stocks = response.data;
+      console.log(response.data.stocks, "dashboard-controller: 11")
+      // Old line:14 'vm.stocks = response.data' 
+      // needed to access .stocks object to retrieve stock info for a user
+      vm.stocks = response.data.stocks;
     }).catch(function(error) {
       console.log(error);
     })

@@ -60,9 +60,10 @@ module.exports.returnPrice = function(symbol) {
         // finished transferring data
         // dump the raw data
         data = JSON.parse(buffer);
-        // console.log(data);
-        var stockData = data['Time Series (Daily)']
+        console.log(data, "data on line:63 stockPrice.js");
+        var stockData = data['Time Series (Daily)'];
         var keys = Object.keys(stockData);
+        
         return parseFloat(stockData[keys[0]]['4. close']);
       }
     }); 
